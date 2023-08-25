@@ -1,5 +1,8 @@
-﻿using CqrsDene.Models.Domain;
+﻿using CqrsDene.Commands;
+using CqrsDene.Models.Domain;
+using CqrsDene.Queries;
 using CqrsDene.Repositories;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CqrsDene.Controllers;
@@ -8,24 +11,26 @@ namespace CqrsDene.Controllers;
 [ApiController]
 public class PeopleController : ControllerBase
 {
-    private readonly IPeopleRepository peopleRepository;
+    private readonly IMediator mediator;
 
-    public PeopleController(IPeopleRepository _peopleRepository)
+    public PeopleController(IMediator _mediator)
     {
-        peopleRepository = _peopleRepository;
+        mediator = _mediator;
     }
 
     [HttpGet]
     public async Task<IActionResult> GetPeople()
     {
-        var people = await peopleRepository.GetAllAsync();
-        return Ok(people);
+        var peopleList = await mediator.Send(new GetPeopleListQuery());
+        return Ok(peopleList);
     }
 
     [HttpGet("{id}")]
+    [ProducesResponseType(typeof(Person), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> GetPerson(int id)
     {
-        var person = await peopleRepository.GetByIdAsync(id);
+        var person = await mediator.Send(new GetPersonByIdQuery(id));
         if (person == null)
         {
             return NotFound();
@@ -35,9 +40,11 @@ public class PeopleController : ControllerBase
     }
 
     [HttpPost]
+    [ProducesResponseType(typeof(Person), StatusCodes.Status201Created)]
     public async Task<IActionResult> CreatePerson(Person person)
     {
-        var createdPerson = await peopleRepository.CreateAsync(person);
+        var createdPerson = await mediator.Send(new CreatePersonCommand(person.FirstName, person.LastName));
+
         return CreatedAtAction(nameof(GetPerson), new { id = createdPerson.Id }, createdPerson);
     }
 }
