@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "W5Thno3vOmuto2ZZISOJxjf+hEeKZImeR4QxO2VbKReX4ncUsPeGJTsQCDkhTqQJ1jSLXde2hyVDGt7DXcFH2A==",
+  "dgSpecHash": "WLrqrHWB6CmE4zU8XX6ahdHA2rW4Afc2+Ixr/lbLyCb6kpmHygRGhGH3bDRgpLFINkX2gYF+7czEqkIym7ve5A==",
   "success": true,
   "projectFilePath": "C:\\kodlar\\cs\\CqrsDene\\CqrsDene.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ozkan.ozesme\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\ozkan.ozesme\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
+    "C:\\Users\\ozkan.ozesme\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\ozkan.ozesme\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.10\\microsoft.aspnetcore.openapi.7.0.10.nupkg.sha512",
     "C:\\Users\\ozkan.ozesme\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.10\\microsoft.entityframeworkcore.7.0.10.nupkg.sha512",
     "C:\\Users\\ozkan.ozesme\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.10\\microsoft.entityframeworkcore.abstractions.7.0.10.nupkg.sha512",

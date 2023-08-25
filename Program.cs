@@ -1,4 +1,5 @@
 using CqrsDene.Data;
+using CqrsDene.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,8 +11,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<CqDataContext>(options =>
+builder.Services.AddDbContext<CqDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<IPeopleRepository, PeopleRepository>();
+
+builder.Services.AddMediatR(option => option.RegisterServicesFromAssembly(typeof(Program).Assembly));
+
 
 var app = builder.Build();
 

@@ -41,3 +41,5 @@ C:\kodlar\cs\CqrsDene\obj\Debug\net7.0\refint\CqrsDene.dll
 C:\kodlar\cs\CqrsDene\obj\Debug\net7.0\CqrsDene.pdb
 C:\kodlar\cs\CqrsDene\obj\Debug\net7.0\CqrsDene.genruntimeconfig.cache
 C:\kodlar\cs\CqrsDene\obj\Debug\net7.0\ref\CqrsDene.dll
+C:\kodlar\cs\CqrsDene\bin\Debug\net7.0\MediatR.dll
+C:\kodlar\cs\CqrsDene\bin\Debug\net7.0\MediatR.Contracts.dll
