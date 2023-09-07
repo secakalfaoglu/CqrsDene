@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\kodlar\\cs\\CqrsDene\\CqrsDene.csproj": {}
+    "D:\\Projects\\CqrsDene\\CqrsDene.csproj": {}
   },
   "projects": {
-    "C:\\kodlar\\cs\\CqrsDene\\CqrsDene.csproj": {
+    "D:\\Projects\\CqrsDene\\CqrsDene.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\kodlar\\cs\\CqrsDene\\CqrsDene.csproj",
+        "projectUniqueName": "D:\\Projects\\CqrsDene\\CqrsDene.csproj",
         "projectName": "CqrsDene",
-        "projectPath": "C:\\kodlar\\cs\\CqrsDene\\CqrsDene.csproj",
-        "packagesPath": "C:\\Users\\ozkan.ozesme\\.nuget\\packages\\",
-        "outputPath": "C:\\kodlar\\cs\\CqrsDene\\obj\\",
+        "projectPath": "D:\\Projects\\CqrsDene\\CqrsDene.csproj",
+        "packagesPath": "C:\\Users\\TSBP_BSB14\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\CqrsDene\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ozkan.ozesme\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\TSBP_BSB14\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -54,11 +52,19 @@
               "target": "Package",
               "version": "[7.0.10, )"
             },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.10, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",

@@ -10,4 +10,7 @@ public class CqDbContext : DbContext
     }
 
     public DbSet<Person> People { get; set; }
+    public DbSet<Product> Product { get; set; }
+    
+    public DbSet<Cities> Cities { get; set; }
 }
